@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - Gassou Gilles-Christ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style_harmonised.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="services.css">
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">GGC</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+        <h1 class="page-title">À propos de moi</h1>
+    </header>
+
+    <!-- About Content -->
+    <main class="about-content">
+        <!-- Intro -->
+        <section class="about-intro">
+            <div class="intro-text">
+                <p>
+                    Salut ! Je suis <strong>Gassou Gilles-Christ</strong>, un développeur fullstack passionné 
+                    basé au Togo. Avec plus de <strong>3 ans d'expérience</strong> dans le développement web et mobile, 
+                    j'aide les entreprises et entrepreneurs à transformer leurs idées en solutions numériques innovantes.
+                </p>
+                <p>
+                    Ma spécialité ? Créer des expériences utilisateur exceptionnelles en combinant un design moderne 
+                    avec des technologies de pointe. Je maîtrise tant le <strong>front-end</strong> (React, Next.js, Flutter) 
+                    que le <strong>back-end</strong> (Node.js, Python, PHP), ce qui me permet de gérer vos projets 
+                    de A à Z.
+                </p>
+            </div>
+            <div>
+                <img src="profile-pic.png" alt="Profile" class="profile-image">
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2 class="cta-title">Prêt à démarrer votre projet ?</h2>
+        <p class="cta-description">
+          Discutons de vos besoins et créons ensemble la solution parfaite pour
+          votre entreprise.
+        </p>
+        <a
+          href="contact.html"
+          class="btn"
+          style="font-size: 1.1rem; padding: 1.2rem 2.5rem"
+        >
+          Contactez-moi maintenant
+        </a>
+      </section>
+
+    <script>
+        
+        // Menu mobile
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const navLinks = document.querySelector('.nav-links');
+
+if (mobileMenuBtn && navLinks) {
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuBtn.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+}
+
+// Fermer le menu en cliquant sur un lien
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenuBtn.classList.remove('active');
+        navLinks.classList.remove('active');
+    });
+});
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

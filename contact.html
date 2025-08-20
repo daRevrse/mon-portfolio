@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Gassou Gilles-Christ</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style_harmonised.css" />
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="nav-container">
+        <a href="index.html" class="logo">GGC</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+      <h1 class="page-title">Contactez-moi</h1>
+      <p class="page-subtitle">
+        Prêt à donner vie à votre projet ? Parlons-en ensemble !
+      </p>
+    </header>
+
+    <!-- Contact Content -->
+    <main class="contact-content">
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h2>Restons connectés</h2>
+        <div class="contact-methods">
+          <div class="contact-method">
+            <div class="contact-icon">📧</div>
+            <div class="contact-details">
+              <h3>Email</h3>
+              <p>
+                <a href="mailto:gassougilles07@gmail.com"
+                  >gassougilles07@gmail.com</a
+                >
+              </p>
+              <p>Réponse sous 24h</p>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <div class="contact-icon">💼</div>
+            <div class="contact-details">
+              <h3>LinkedIn</h3>
+              <p>
+                <a href="https://linkedin.com/in/gassougilles" target="_blank"
+                  >@gassougilles</a
+                >
+              </p>
+              <p>Réseau professionnel</p>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <div class="contact-icon">📱</div>
+            <div class="contact-details">
+              <h3>Téléphone</h3>
+              <p><a href="tel:+22893231346">+228 93 23 13 46</a></p>
+              <p>Disponible 9h-18h</p>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <div class="contact-icon">📍</div>
+            <div class="contact-details">
+              <h3>Localisation</h3>
+              <p>Lomé, Togo</p>
+              <p>Disponible en remote</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="https://linkedin.com/in/gassougilles" class="social-link"
+            >💼</a
+          >
+          <a href="https://github.com/daRevrse" class="social-link">🐱</a>
+          <a href="mailto:gassougilles07@gmail.com" class="social-link">📧</a>
+          <a href="https://twitter.com" class="social-link">🐦</a>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <h2>Démarrons votre projet</h2>
+        <div class="success-message" id="successMessage">
+          ✅ Message envoyé avec succès ! Je vous répondrai bientôt.
+        </div>
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">Prénom *</label>
+              <input type="text" id="firstName" name="firstName" required />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Nom *</label>
+              <input type="text" id="lastName" name="lastName" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Téléphone</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="company">Entreprise</label>
+            <input type="text" id="company" name="company" />
+          </div>
+
+          <div class="form-group">
+            <label for="service">Type de projet *</label>
+            <select id="service" name="service" required>
+              <option value="">Sélectionnez un service</option>
+              <option value="web">Site Web</option>
+              <option value="mobile">Application Mobile</option>
+              <option value="ecommerce">E-commerce</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+
+          <button class="submit-button" type="submit">Envoyer</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
